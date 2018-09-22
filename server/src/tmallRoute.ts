@@ -22,7 +22,7 @@ function CategorySearch(req: Request, res: Response) {
 
     console.log(req.body, queryString.stringify(data))
 
-    request.get(`${config.origin}com.taobao.tmallsearch.service.tmallnavservice/1.0/?${queryString.stringify(data)}`,  (err, response, body) => {
+    request.get(`${config.origin}com.taobao.tmallsearch.service.tmallnavservice/1.0/?${queryString.stringify(data)}`,  (err, _, body) => {
         console.log("chen")
 
         console.log(body)

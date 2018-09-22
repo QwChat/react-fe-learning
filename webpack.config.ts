@@ -1,7 +1,7 @@
 import webpack from "webpack"
 import { resolve } from "path"
 import UglifyJsPlugin from "uglifyjs-webpack-plugin"
-import { CheckerPlugin } from "awesome-typescript-loader"
+import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin"
 import MiniCssExtractPlugin from "mini-css-extract-plugin"
 import OptimizeCSSAssetsPlugin from "optimize-css-assets-webpack-plugin"
 import HtmlWebpackPlugin from "html-webpack-plugin"
@@ -58,13 +58,25 @@ export const webpackConfig: webpack.Configuration = {
     module: {
         rules: [
             {
-                test: /\.tsx?$/,
-                use: [
-                    {
-                        loader: "awesome-typescript-loader",
-                        options: {}
+                test: /\.(j|t)sx?$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        cacheDirectory: true,
+                        babelrc: false,
+                        presets: [
+                            [ "@babel/preset-env", { targets: { browsers: "last 2 versions" } } ],
+                            "@babel/preset-typescript",
+                            "@babel/preset-react"
+                        ],
+                        plugins: [
+                            [ "@babel/plugin-proposal-decorators", { legacy: true } ],
+                            [ "@babel/plugin-proposal-class-properties", { loose: true } ],
+                            "react-hot-loader/babel"
+                        ]
                     }
-                ]
+                }
             },
             {
                 test: /\.scss$/,
@@ -98,12 +110,14 @@ export const webpackConfig: webpack.Configuration = {
         ]
     },
     plugins: [
-        new CheckerPlugin(),
+        new ForkTsCheckerWebpackPlugin({
+            tslint: true
+        }),
         new HtmlWebpackPlugin({
             template: "./src/index.html"
         }),
         new webpack.DefinePlugin({
-            __DEV__: __DEV__
+            __DEV__
         })
     ].concat(__DEV__ ? [] : prodPlugins)
 }

@@ -4,7 +4,7 @@ import { tmallRoute } from "./src/tmallRoute"
 
 const app = express()
 
-app.get("/", (req, res, next) => {
+app.get("/", (_, res, next) => {
     res.send("this is server homepage")
     next()
 })

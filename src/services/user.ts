@@ -3,56 +3,49 @@
  * Don't change manually
  */
 
-import webapi from "../webapi";
+import webapi from "../webapi"
 
 export interface CommonResult {
-	status: boolean;
-	message: string;
+    status: boolean
+    message: string
 }
 
 export interface UserInfo {
-	nickname: string;
-	email: string;
-	userId: string;
+    nickname: string
+    email: string
+    userId: string
 }
 
 export interface RegisterRequest {
-	nickname: string;
-	password: string;
-	email: string;
+    nickname: string
+    password: string
+    email: string
 }
 
 export interface RegisterResponse {
-	result: CommonResult;
-	/**
-	 * @minimum 0
-	 * @TJS-type integer
-	 */
-	userId: number;
+    result: CommonResult
+    userId: number
 }
 
 export interface LoginRequest {
-	nickname: string;
-	password: string;
+    nickname: string
+    password: string
 }
 
 export interface LoginResponse {
-	result: CommonResult;
-	userInfo: UserInfo;
+    result: CommonResult
+    userInfo: UserInfo
 }
 
-
-
 export function Register(payload: Partial<RegisterRequest>) {
-	return webapi<RegisterResponse>("user.User/Register", payload);
+    return webapi<RegisterResponse>("user.User/Register", payload)
 }
 
 export function Login(payload: Partial<LoginRequest>) {
-	return webapi<LoginResponse>("user.User/Login", payload);
+    return webapi<LoginResponse>("user.User/Login", payload)
 }
 
-
 export default {
-	Register,
-	Login,
-};
+    Register,
+    Login
+}

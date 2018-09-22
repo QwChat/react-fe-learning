@@ -1,6 +1,6 @@
 import webpack from "webpack"
 import express from "express"
-import webpackMiddleware from "webpack-dev-middleware"
+import webpackDevMiddleware from "webpack-dev-middleware"
 import webpackHotMiddleware from "webpack-hot-middleware"
 import config from "./webpack.config"
 import { IsProd } from "./helper"
@@ -22,7 +22,7 @@ if (IsProd()) {
         }
     })
 } else {
-    const middleware = webpackMiddleware(compiler, {
+    const middleware = webpackDevMiddleware(compiler, {
         publicPath: config.output ? config.output.publicPath : "",
         contentBase: "src",
         stats: {

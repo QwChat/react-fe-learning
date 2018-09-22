@@ -1,7 +1,7 @@
 import webpack from "webpack"
 import { resolve } from "path"
 import UglifyJsPlugin from "uglifyjs-webpack-plugin"
-import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin"
+// import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin"
 import MiniCssExtractPlugin from "mini-css-extract-plugin"
 import OptimizeCSSAssetsPlugin from "optimize-css-assets-webpack-plugin"
 import HtmlWebpackPlugin from "html-webpack-plugin"
@@ -25,8 +25,6 @@ const minimizer = [
     }),
     new OptimizeCSSAssetsPlugin({})
 ]
-
-console.log(__DEV__, process.env.NODE_ENV)
 
 export const webpackConfig: webpack.Configuration = {
     mode: __DEV__ ? "development" : "production",
@@ -57,6 +55,11 @@ export const webpackConfig: webpack.Configuration = {
     },
     module: {
         rules: [
+            // {
+            //     enforce: "pre",
+            //     test: /\.(j|t)sx?$/,
+            //     loader: "source-map-loader"
+            // },
             {
                 test: /\.(j|t)sx?$/,
                 exclude: /node_modules/,
@@ -85,7 +88,8 @@ export const webpackConfig: webpack.Configuration = {
                     {
                         loader: "css-loader",
                         options: {
-                            sourceMap: __DEV__
+                            sourceMap: __DEV__,
+                            modules: true
                         }
                     },
                     {
@@ -110,12 +114,13 @@ export const webpackConfig: webpack.Configuration = {
         ]
     },
     plugins: [
-        new ForkTsCheckerWebpackPlugin({
-            tslint: true
-        }),
+        // new ForkTsCheckerWebpackPlugin({
+        //     tslint: true
+        // }),
         new HtmlWebpackPlugin({
             template: "./src/index.html"
         }),
+        new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({
             __DEV__
         })

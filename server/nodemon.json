@@ -1,0 +1,7 @@
+{
+    "ext": "ts,yaml,js,json",
+    "watch": ["server"],
+    "execMap": {
+        "ts": "ts-node"
+    }
+}

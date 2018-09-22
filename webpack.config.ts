@@ -30,6 +30,7 @@ export const webpackConfig: webpack.Configuration = {
     mode: __DEV__ ? "development" : "production",
     entry: GetAllEntries(),
     output: {
+        publicPath: "/",
         path: resolve(__dirname, "./dist"),
         filename: __DEV__ ? "js/[name].bundle.js" : "js/[name].[hash].bundle.js",
         chunkFilename: __DEV__ ? "js/[name].chunk.bundle.js" : "js/[name].[chunkhash].bundle.js"
@@ -84,7 +85,12 @@ export const webpackConfig: webpack.Configuration = {
             {
                 test: /\.scss$/,
                 use: [
-                    __DEV__ ? "style-loader" : MiniCssExtractPlugin.loader,
+                    {
+                        loader: __DEV__ ? "style-loader" : MiniCssExtractPlugin.loader,
+                        options: {
+                            sourceMap: __DEV__
+                        }
+                    },
                     {
                         loader: "css-loader",
                         options: {
@@ -95,6 +101,7 @@ export const webpackConfig: webpack.Configuration = {
                     {
                         loader: "sass-loader",
                         options: {
+                            data: `$env: ${__DEV__};`,
                             sourceMap: __DEV__
                         }
                     }
@@ -117,14 +124,35 @@ export const webpackConfig: webpack.Configuration = {
         // new ForkTsCheckerWebpackPlugin({
         //     tslint: true
         // }),
-        new HtmlWebpackPlugin({
-            template: "./src/index.html"
-        }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({
             __DEV__
         })
     ].concat(__DEV__ ? [] : prodPlugins)
+}
+
+function removeItemFormArray(arr: string[], item: string): string[] {
+    const newArr = [ ...arr ]
+
+    newArr.splice(arr.indexOf(item), 1)
+
+    return newArr
+}
+
+// HtmlWebpackPlugin
+if (webpackConfig.plugins) {
+    const entry = GetAllEntries()
+    for (const page in entry) {
+        if (entry.hasOwnProperty(page)) {
+            webpackConfig.plugins.push(
+                new HtmlWebpackPlugin({
+                    excludeChunks: removeItemFormArray(Object.keys(entry), page),
+                    template: "./src/index.html",
+                    filename: `${page}.html`
+                })
+            )
+        }
+    }
 }
 
 if (__DEV__) {

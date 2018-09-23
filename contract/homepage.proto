@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package homepage;
+
+message Empty {}
+
+message Nav {
+    string name = 1;
+    string image = 2;
+    string url = 3;
+}
+
+message Banner {
+    string title = 1;
+    string image = 2;
+    string url = 3;
+}
+
+message WindowResponse {
+    repeated Nav navs = 1;
+    repeated Banner banners = 2;
+}
+
+service Homepage {
+    rpc Window (Empty) returns (WindowResponse);
+}

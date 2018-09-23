@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package product;
+
+message ProductItem {
+    int32 id = 1;
+    string price = 2;
+    string title = 3;
+    string url = 4;
+    string image = 5;
+}
+
+message ProductListRequest {
+    string shopId = 1;
+    int32 limit = 2;
+    int32 offset = 3;
+}
+
+message ProductListResponse {
+    repeated ProductItem products = 1;
+    int32 total = 2;
+    string shopId = 3;
+    string shopName = 4;
+}
+
+service Product {
+    rpc ProductList (ProductListRequest) returns (ProductListResponse);
+}

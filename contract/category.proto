@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package category;
+
+message CategoryItem {
+    string id = 1;
+    string name = 2;
+    string image = 3;
+    string url = 4;
+}
+
+message SectionCategory {
+    string id = 1;
+    string type = 2;
+    string name = 3;
+    repeated CategoryItem categories = 4;
+}
+
+message SideItem {
+    string id = 1;
+    string name = 2;
+}
+
+message CategoryListRequest {
+    string sideId = 1;
+}
+
+message CategoryListResponse {
+    repeated SideItem sideItems = 1;
+    repeated SectionCategory sectionCategoryList = 2;
+}
+
+service Category {
+    rpc CategoryList (CategoryListRequest) returns (CategoryListResponse);
+}

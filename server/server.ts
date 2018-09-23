@@ -1,15 +1,20 @@
 import express from "express"
+import bodyParser from "body-parser"
 
-import { tmallRoute } from "./src/tmallRoute"
+import { homepageRoute } from "./src/homepage"
+import { categoryRoute } from "./src/category"
 
 const app = express()
 
+app.use(bodyParser.json())
+
 app.get("/", (_, res, next) => {
     res.send("this is server homepage")
-    next()
 })
 
-tmallRoute(app)
+homepageRoute(app)
+
+categoryRoute(app)
 
 app.listen(3001)
 

@@ -21,18 +21,18 @@ export interface Banner {
 	url: string;
 }
 
-export interface WindowResponse {
+export interface showcaseResponse {
 	navs: Nav[];
 	banners: Banner[];
 }
 
 
 
-export function Window(payload: Partial<Empty>) {
-	return webapi<WindowResponse>("homepage.Homepage/Window", payload);
+export function showcase(payload: Partial<Empty>) {
+	return webapi<showcaseResponse>("homepage.Homepage/showcase", payload);
 }
 
 
 export default {
-	Window,
+	showcase,
 };

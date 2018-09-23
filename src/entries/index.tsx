@@ -1,3 +1,4 @@
+// GENERATED CODE -- DO NOT EDIT!
 // generate by scripts "scripts/generateEntry.ts"
 
 import * as React from "react"

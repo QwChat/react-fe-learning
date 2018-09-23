@@ -9,7 +9,8 @@ pages.forEach((page) => {
     const entryFolder = resolve(__dirname, "../src/entries")
     const entryFilename = entryFolder + `/${name.toLocaleLowerCase()}.tsx`
 
-    const entryContent = `// generate by scripts "scripts/generateEntry.ts"
+    const entryContent = `// GENERATED CODE -- DO NOT EDIT!
+// generate by scripts "scripts/generateEntry.ts"
 
 import * as React from "react"
 import * as ReactDOM from "react-dom"

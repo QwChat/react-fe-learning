@@ -16,11 +16,11 @@ message Banner {
     string url = 3;
 }
 
-message WindowResponse {
+message showcaseResponse {
     repeated Nav navs = 1;
     repeated Banner banners = 2;
 }
 
 service Homepage {
-    rpc Window (Empty) returns (WindowResponse);
+    rpc showcase (Empty) returns (showcaseResponse);
 }

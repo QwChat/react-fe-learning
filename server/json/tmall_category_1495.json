@@ -1,0 +1,171 @@
+{
+    "api": "com.taobao.tmallsearch.service.tmallnavservice",
+    "data": {
+        "mainBlock": {
+            "models": [
+                {
+                    "cache": "false",
+                    "name": "品牌墙",
+                    "id": "142",
+                    "type": "brand",
+                    "list": [
+                        {
+                            "id": "3423",
+                            "pic": "//img.alicdn.com/tps/i4/TB1PhrmHpXXXXX0XXXXXD.cNVXX-400-200.png",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=107922698"
+                        },
+                        {
+                            "id": "3424",
+                            "pic": "//img.alicdn.com/tps/i4/TB11KlzHXXXXXcKXXXXwu0bFXXX.png",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=109681130"
+                        },
+                        {
+                            "id": "3425",
+                            "pic": "//img.alicdn.com/tps/i4/T1bH9CXmhfXXb1upjX.jpg",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=63098095"
+                        },
+                        {
+                            "id": "3426",
+                            "pic": "//img.alicdn.com/tps/i4/TB14PoAGVXXXXXXaXXXwu0bFXXX.png",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=102435051"
+                        },
+                        {
+                            "id": "3427",
+                            "pic": "//img.alicdn.com/tps/i4/T1QnFTXXpFXXb1upjX.jpg",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=111852592"
+                        },
+                        {
+                            "id": "3428",
+                            "pic": "//img.alicdn.com/tps/i4/TB1MWWGGVXXXXbeaXXXSutbFXXX.jpg",
+                            "url": "//shop.m.taobao.com/shop/shop_index.htm?shop_id=113121576"
+                        },
+                        {
+                            "id": "3429",
+                            "pic": "//img.alicdn.com/tps/i4/T1OnjUXdBaXXXQXDnq-90-45.png",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=102022741"
+                        },
+                        {
+                            "id": "3430",
+                            "pic": "//img.alicdn.com/tps/i4/T1h6otXftXXXb1upjX",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=64641238"
+                        },
+                        {
+                            "id": "3431",
+                            "pic": "//img.alicdn.com/tps/i4/TB1W423GFXXXXa_aXXXwu0bFXXX.png",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=67397531"
+                        },
+                        {
+                            "id": "3432",
+                            "pic": "//img.alicdn.com/tps/i4/TB1C6jpHpXXXXbrXFXXwu0bFXXX.png",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=113462750"
+                        },
+                        {
+                            "id": "3433",
+                            "pic": "//img.alicdn.com/tps/i4/TB1ohvdHpXXXXcGXpXXwu0bFXXX.png",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=57303596"
+                        },
+                        {
+                            "id": "3434",
+                            "pic": "//img.alicdn.com/tps/i4/TB1xdLkHpXXXXcpXFXXwu0bFXXX.png",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=114249705"
+                        },
+                        {
+                            "id": "3435",
+                            "pic": "//img.alicdn.com/tps/i4/TB1zmjiHpXXXXXbXFXXwu0bFXXX.png",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=64751899"
+                        },
+                        {
+                            "id": "3436",
+                            "pic": "//img.alicdn.com/tps/i4/TB1lqjtGVXXXXX2apXXwu0bFXXX.png",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=69377926"
+                        },
+                        {
+                            "id": "4391",
+                            "pic": "//img.alicdn.com/tps/i4/TB2w6r8jVXXXXXiXpXXXXXXXXXX_!!2428721558.jpg",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shopId=116766032"
+                        },
+                        {
+                            "id": "3438",
+                            "pic": "//img.alicdn.com/tps/i4/TB1TqhoHXXXXXXgaXXXwu0bFXXX.png",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=116386742"
+                        },
+                        {
+                            "id": "4392",
+                            "pic": "//img.alicdn.com/tps/i4/TB24dj_jVXXXXXaXpXXXXXXXXXX_!!2183615086.jpg",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shopId=104748017"
+                        },
+                        {
+                            "id": "3440",
+                            "pic": "//img.alicdn.com/tps/i4/TB1iJTdGVXXXXclaXXXSutbFXXX.jpg",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=106540566"
+                        },
+                        {
+                            "id": "3441",
+                            "pic": "//img.alicdn.com/tps/i4/TB1k7SaGVXXXXXZaXXXwu0bFXXX.png",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=103892217"
+                        },
+                        {
+                            "id": "3442",
+                            "pic": "//img.alicdn.com/tps/i4/TB17P9qHpXXXXcXXpXXwu0bFXXX.png",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=72571314"
+                        },
+                        {
+                            "id": "3443",
+                            "pic": "//img.alicdn.com/tps/i4/TB1EeysHpXXXXaRXpXXwu0bFXXX.png",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=110224300"
+                        },
+                        {
+                            "id": "3444",
+                            "pic": "//img.alicdn.com/tps/i4/TB1kuopGFXXXXbBaXXXwu0bFXXX.png",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=73228923"
+                        },
+                        {
+                            "id": "3445",
+                            "pic": "//img.alicdn.com/tps/i4/TB1HG6gGVXXXXaZapXXwu0bFXXX.png",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=114646595"
+                        },
+                        {
+                            "id": "3446",
+                            "pic": "//img.alicdn.com/tps/i4/TB1GKuqHpXXXXcmXpXXSutbFXXX.jpg",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=109537841"
+                        },
+                        {
+                            "id": "3447",
+                            "pic": "//img.alicdn.com/tps/i4/TB1Na.pGFXXXXcwXVXXSutbFXXX.jpg",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=105843443"
+                        },
+                        {
+                            "id": "3448",
+                            "pic": "//img.alicdn.com/tps/i4/TB1nfMUGpXXXXalXXXXSutbFXXX.jpg",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=110271147"
+                        },
+                        {
+                            "id": "3450",
+                            "pic": "//img.alicdn.com/tps/i4/TB1TOmBGFXXXXacXFXXSutbFXXX.jpg",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=101737739"
+                        },
+                        {
+                            "id": "3451",
+                            "pic": "//img.alicdn.com/tps/i4/TB1OoXeHXXXXXcnXVXXwu0bFXXX.png",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=103415110"
+                        },
+                        {
+                            "id": "3452",
+                            "pic": "//img.alicdn.com/tps/i4/TB1Il1oHpXXXXcSXVXXwu0bFXXX.png",
+                            "url": "//shop.m.taobao.com/shop/shopIndex.htm?shop_id=102269358"
+                        },
+                        {
+                            "id": "3453",
+                            "pic": "//img.alicdn.com/tps/i4/TB1_AMXGFXXXXb2aXXXSutbFXXX.jpg",
+                            "url": "//tb.cn/shop?shopId=104332625"
+                        }
+                    ]
+                }
+            ]
+        },
+        "sideBlock": {},
+        "ver": "1"
+    },
+    "ret": [ "SUCCESS::调用成功" ],
+    "v": "1.0"
+}

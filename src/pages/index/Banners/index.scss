@@ -1,0 +1,21 @@
+.banners {
+    position: relative;
+    height: 2.64rem;
+    margin: 0 .2rem;
+}
+.shadow {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 2.1rem;
+    img {
+        width: 100%;
+    }
+}
+
+.item {
+    img {
+        width: 100%;
+        display: block;
+    }
+}

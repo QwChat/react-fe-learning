@@ -84,6 +84,7 @@ export const webpackConfig: webpack.Configuration = {
             },
             {
                 test: /\.scss$/,
+                exclude: /node_modules/,
                 use: [
                     {
                         loader: __DEV__ ? "style-loader" : MiniCssExtractPlugin.loader,
@@ -95,7 +96,8 @@ export const webpackConfig: webpack.Configuration = {
                         loader: "css-loader",
                         options: {
                             sourceMap: __DEV__,
-                            modules: true
+                            modules: true,
+                            localIdentName: __DEV__ ? "[local]--[hash:base64:5]" : "[hash:base64:5]"
                         }
                     },
                     {
@@ -108,12 +110,41 @@ export const webpackConfig: webpack.Configuration = {
                 ]
             },
             {
+                test: /\.css$/,
+                use: [
+                    {
+                        loader: __DEV__ ? "style-loader" : MiniCssExtractPlugin.loader,
+                        options: {
+                            sourceMap: __DEV__
+                        }
+                    },
+                    {
+                        loader: "css-loader",
+                        options: {
+                            sourceMap: __DEV__
+                        }
+                    }
+                ]
+            },
+            {
                 test: /\.(png|jpg|jpeg|gif|svg)$/,
                 use: [
                     {
                         loader: "url-loader",
                         options: {
                             limit: 8192
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "[name].[ext]",
+                            outputPath: "fonts/"
                         }
                     }
                 ]

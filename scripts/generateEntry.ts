@@ -15,6 +15,7 @@ pages.forEach((page) => {
 import * as React from "react"
 import * as ReactDOM from "react-dom"
 import "../scss/reset.scss"
+import "../scss/base.scss"
 import Index from "${relative(entryFolder, page)}"
 
 ReactDOM.render(<Index />, document.getElementById("reactApp"))

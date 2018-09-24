@@ -65,7 +65,10 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "file-loader": "^2.0.0",
     "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "react-dom": "^16.4.0",
+    "react-slick": "^0.23.1",
+    "slick-carousel": "^1.8.1"
   }
 }

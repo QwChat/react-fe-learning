@@ -1,0 +1,22 @@
+.navs {
+    padding: .2rem .2rem;
+    display: flex;
+}
+
+.item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    img {
+        width: .96rem;
+        height: .96rem;
+    }
+}
+
+.name {
+    font-size: .26rem;
+    line-height: .3rem;
+    color: #000;
+}

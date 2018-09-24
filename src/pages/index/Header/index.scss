@@ -1,0 +1,64 @@
+
+.header {
+    background-color: #ff0036;
+    padding: 0 .2rem .2rem;
+}
+
+.head {
+    display: flex;
+    padding: .14rem 0;
+
+    .logo {
+        flex: 1;
+        height: .6rem;
+        text-align: center;
+        line-height: .6rem;
+        font-size: 0;
+
+        img {
+            height: .4rem;
+            vertical-align: middle;
+        }
+    }
+
+    .menu {
+        width: .6rem;
+        height: .6rem;
+        overflow: hidden;
+
+        img {
+            height: .6rem;
+        }
+    }
+
+    a {
+        line-height: .6rem;
+        font-size: .28rem;
+        color: #fff;
+    }
+}
+
+.headerSearch {
+    background-color: #fff;
+    border-radius: .08rem;
+    display: flex;
+    padding: 0 .2rem;
+    height: .76rem;
+
+    input {
+        flex: 1;
+        font-size: .28rem;
+    }
+}
+
+.searchIcon {
+    width: .4rem;
+    line-height: .76rem;
+    overflow: hidden;
+    font-size: 0;
+
+    img {
+        height: .32rem;
+        vertical-align: middle;
+    }
+}

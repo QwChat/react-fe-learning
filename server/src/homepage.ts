@@ -1,9 +1,31 @@
 import { Express, Response, Request } from "express"
 
-const showcaseMock = require("../json/showcase.json")
+const { data: { 2017080800: homepageData } } = require("../json/tmall_homepage.json")
 
 function ShowCase(_: Request, res: Response) {
-    res.send(JSON.stringify(showcaseMock))
+    const navs = homepageData.data.cards[0].items.map((ele) => ({
+        name: ele.title,
+        image: ele.imgUrl,
+        url: "#"
+    }))
+    const banners = homepageData.data.cards[1].items[0].items.map((ele) => ({
+        title: ele.activity,
+        image: ele.imgUrl,
+        url: "#"
+    }))
+    const products = homepageData.data.cards[10].items.map((ele) => ({
+        title: ele.title,
+        url: ele.subAction,
+        price: ele.price,
+        shopName: ele.shopName,
+        brandName: ele.brandTitle
+    }))
+
+    res.json({
+        navs,
+        banners,
+        products
+    })
 }
 
 export const homepageRoute = (app: Express) => {

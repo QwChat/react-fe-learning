@@ -1,0 +1,51 @@
+.sectionItem {
+    padding: .2rem 0 0;
+
+    & > h3 {
+        font-size: .36rem;
+        line-height: .4rem;
+        padding: .2rem;
+    }
+}
+
+.products {
+    display: flex;
+    padding: 0 .2rem;
+    flex-wrap: wrap;
+}
+
+.productItem {
+    margin-bottom: .2rem;
+    border: 1px solid #ededed;
+    box-sizing: border-box;
+    width: 3.44rem;
+    &:nth-child(2n + 1) {
+        margin-right: .2rem;
+    }
+}
+.img {
+    padding: .3rem;
+    background-color: #00000008;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.info {
+    padding: .2rem;
+    font-size: .28rem;
+
+    .name {
+        height: .8rem;
+        line-height: .4rem;
+    }
+
+    .price {
+        margin-top: .4rem;
+        font-weight: bold;
+        color: #f00;
+        font-size: .32rem;
+    }
+}

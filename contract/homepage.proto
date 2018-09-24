@@ -16,9 +16,20 @@ message Banner {
     string url = 3;
 }
 
+message ProductItem {
+    string title = 1;
+    string url = 2;
+    string price = 3;
+    string shopName = 4;
+    string brandName = 5;
+    string image = 6;
+    string sellerId = 7;
+}
+
 message showcaseResponse {
     repeated Nav navs = 1;
     repeated Banner banners = 2;
+    repeated ProductItem products = 3;
 }
 
 service Homepage {

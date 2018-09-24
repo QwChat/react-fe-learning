@@ -21,9 +21,20 @@ export interface Banner {
 	url: string;
 }
 
+export interface ProductItem {
+	title: string;
+	url: string;
+	price: string;
+	shopName: string;
+	brandName: string;
+	image: string;
+	sellerId: string;
+}
+
 export interface showcaseResponse {
 	navs: Nav[];
 	banners: Banner[];
+	products: ProductItem[];
 }
 
 

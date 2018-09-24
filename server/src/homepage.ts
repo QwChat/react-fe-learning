@@ -18,7 +18,9 @@ function ShowCase(_: Request, res: Response) {
         url: ele.subAction,
         price: ele.price,
         shopName: ele.shopName,
-        brandName: ele.brandTitle
+        brandName: ele.brandTitle,
+        image: ele.imgUrl,
+        sellerId: ele.sellerId
     }))
 
     res.json({

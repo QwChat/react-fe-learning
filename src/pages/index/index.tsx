@@ -2,15 +2,17 @@ import * as React from "react"
 import { hot } from "react-hot-loader"
 import styles from "./index.scss"
 
-import { showcase, Nav, Banner } from "../../services/homepage"
+import { showcase, Nav, Banner, ProductItem } from "../../services/homepage"
 
 import { Header } from "./Header"
 import { Navs } from "./Navs"
 import { Banners } from "./Banners"
+import { Products } from "./Products"
 
 interface IIndexState {
     navs: Nav[]
     banners: Banner[]
+    products: ProductItem[]
 }
 
 class Index extends React.Component<{}, IIndexState> {
@@ -18,7 +20,8 @@ class Index extends React.Component<{}, IIndexState> {
         super(props)
         this.state = {
             navs: [],
-            banners: []
+            banners: [],
+            products: []
         }
     }
 
@@ -28,6 +31,7 @@ class Index extends React.Component<{}, IIndexState> {
                 <Header />
                 <Navs navs={this.state.navs} />
                 <Banners banners={this.state.banners} />
+                <Products products={this.state.products} />
             </div>
         )
     }
@@ -37,7 +41,8 @@ class Index extends React.Component<{}, IIndexState> {
             if (data) {
                 this.setState({
                     navs: data.navs,
-                    banners: data.banners
+                    banners: data.banners,
+                    products: data.products
                 })
             }
         })

@@ -3,11 +3,11 @@ import { hot } from "react-hot-loader"
 
 import styles from "./index.scss"
 
-interface CategoryProps {}
+interface ICategoryProps {}
 
-interface CategoryState {}
+interface ICategoryState {}
 
-class Category extends React.Component<CategoryProps, CategoryState> {
+class Category extends React.Component<ICategoryProps, ICategoryState> {
     public render(): JSX.Element {
         return <span className={styles.wrapper}>Category</span>
     }

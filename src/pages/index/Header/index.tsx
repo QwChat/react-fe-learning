@@ -6,7 +6,7 @@ export class Header extends React.Component<{}, {}> {
         return (
             <div className={styles.header}>
                 <div className={styles.head}>
-                    <a className={styles.menu} href="#">
+                    <a className={styles.menu} href="/category.html">
                         <img src={require("./icon.png")} alt="" />
                     </a>
                     <div className={styles.logo}>

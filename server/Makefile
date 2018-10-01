@@ -10,5 +10,5 @@ protobuf:
 		--plugin="protoc-gen-ts=${PROTOC_GEN_TS_PATH}" \
 		--js_out="import_style=commonjs,binary:${OUT_DIR}" \
 		--ts_out="service=true:${OUT_DIR}" \
-		-I ../contract \
-		../contract/homepage.proto ../contract/category.proto ../contract/product.proto
+		-I ../apidoc \
+		../apidoc/homepage.proto ../apidoc/category.proto ../apidoc/product.proto

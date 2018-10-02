@@ -1,11 +1,11 @@
 import * as React from "react"
 import Slider from "react-slick"
-
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
 import styles from "./index.scss"
 import { Banner } from "../../../services/homepage"
+import Image from "../../../components/Image";
 
 interface IBannersProps {
     banners: Banner[]
@@ -33,7 +33,7 @@ export class Banners extends React.Component<IBannersProps, IBannersState> {
                     {this.props.banners.map((banner, index) => {
                         return (
                             <div className={styles.item} key={index}>
-                                <img src={banner.image} alt="" />
+                                <Image src={banner.image} />
                             </div>
                         )
                     })}

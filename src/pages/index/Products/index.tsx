@@ -2,6 +2,7 @@ import * as React from "react"
 import { ProductItem } from "./../../../services/homepage"
 
 import styles from "./index.scss"
+import Image from "../../../components/Image";
 
 interface IProductsProps {
     products: ProductItem[]
@@ -19,7 +20,7 @@ export class Products extends React.Component<IProductsProps, IProductsState> {
                         return (
                             <div key={index} className={styles.productItem}>
                                 <div className={styles.img}>
-                                    <img src={product.image} alt={product.title} />
+                                    <Image src={product.image} alt={product.title} />
                                 </div>
                                 <div className={styles.info}>
                                     <p className={styles.name}>{product.title}</p>

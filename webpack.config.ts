@@ -1,7 +1,7 @@
 import webpack from "webpack"
 import { resolve } from "path"
 import UglifyJsPlugin from "uglifyjs-webpack-plugin"
-import ErrorOverlayPlugin from "error-overlay-webpack-plugin"
+// import ErrorOverlayPlugin from "error-overlay-webpack-plugin"
 import { CheckerPlugin } from "awesome-typescript-loader"
 import MiniCssExtractPlugin from "mini-css-extract-plugin"
 import OptimizeCSSAssetsPlugin from "optimize-css-assets-webpack-plugin"
@@ -169,7 +169,7 @@ export const webpackConfig: webpack.Configuration = {
     },
     plugins: [
         new CheckerPlugin(),
-        new ErrorOverlayPlugin(),
+        // new ErrorOverlayPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({
             __DEV__

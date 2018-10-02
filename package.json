@@ -68,7 +68,10 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "classnames": "^2.2.6",
     "file-loader": "^2.0.0",
+    "mobx": "^5.5.0",
+    "mobx-react": "^5.2.8",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-slick": "^0.23.1",

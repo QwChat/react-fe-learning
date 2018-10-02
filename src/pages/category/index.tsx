@@ -2,6 +2,8 @@ import * as React from "react"
 import { observer } from "mobx-react"
 import { hot } from "react-hot-loader"
 import classnames from "classnames"
+import DevTools from "mobx-react-devtools"
+import makeInspectable from "mobx-devtools-mst"
 
 import styles from "./index.scss"
 
@@ -66,6 +68,13 @@ class Category extends React.Component<ICategoryProps, ICategoryState> {
                         })}
                     </div>
                 </div>
+
+                <DevTools
+                    position={{
+                        top: 50,
+                        right: 50
+                    }}
+                />
             </div>
         )
     }
@@ -73,6 +82,8 @@ class Category extends React.Component<ICategoryProps, ICategoryState> {
 
 const store = new CategoryModel()
 
-export default hot(module)(() => {
+makeInspectable(store)
+
+export default hot(module)(function CategoryPage() {
     return <Category store={store} />
 })

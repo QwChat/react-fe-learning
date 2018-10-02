@@ -5957,12 +5957,24 @@ mixin-object@^2.0.1:
   dependencies:
     minimist "0.0.8"
 
+mobx-devtools-mst@^0.9.18:
+  version "0.9.18"
+  resolved "https://registry.npmjs.org/mobx-devtools-mst/-/mobx-devtools-mst-0.9.18.tgz#ba515b15d05eb0a971a409a5fa587fffd3065dda"
+
+mobx-react-devtools@^6.0.3:
+  version "6.0.3"
+  resolved "https://registry.npmjs.org/mobx-react-devtools/-/mobx-react-devtools-6.0.3.tgz#4d536c8cdd77d9f4b81f5e8415d7bedccc6a2a99"
+
 mobx-react@^5.2.8:
   version "5.2.8"
   resolved "https://registry.npmjs.org/mobx-react/-/mobx-react-5.2.8.tgz#059c7f29254d7cd36e103d79113103b40348d3bf"
   dependencies:
     hoist-non-react-statics "^2.5.0"
     react-lifecycles-compat "^3.0.2"
+
+mobx-state-tree@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.npmjs.org/mobx-state-tree/-/mobx-state-tree-3.5.0.tgz#13167e0356838657de0b1df860be2d3a5147e54c"
 
 mobx@^5.5.0:
   version "5.5.0"

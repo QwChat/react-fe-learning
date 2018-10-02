@@ -1,0 +1,230 @@
+{
+    "api": "com.taobao.tmallsearch.service.tmallnavservice",
+    "data": {
+        "mainBlock": {
+            "models": [
+                {
+                    "cache": "false",
+                    "name": "女装",
+                    "id": "8141",
+                    "type": "cat",
+                    "list": [
+                        {
+                            "name": "连衣裙",
+                            "id": "8142",
+                            "pic": "//img.alicdn.com/tfs/TB1YTCkqXOWBuNjy0FiXXXFxVXa-100-100.jpg",
+                            "url": "//s.m.tmall.com/search.htm?cat=50025145"
+                        },
+                        {
+                            "name": "T恤",
+                            "id": "8143",
+                            "pic": "//img.alicdn.com/tfs/TB1I0W2qf1TBuNjy0FjXXajyXXa-100-100.jpg",
+                            "url": "//s.m.tmall.com/search.htm?cat=50029627"
+                        },
+                        {
+                            "name": "衬衫",
+                            "id": "8145",
+                            "pic": "//img.alicdn.com/tfs/TB1XzKuqXuWBuNjSspnXXX1NVXa-100-100.jpg",
+                            "url": "//s.m.tmall.com/search.htm?cat=162104"
+                        },
+                        {
+                            "name": "雪纺衫",
+                            "id": "8146",
+                            "pic": "//img.alicdn.com/tfs/TB1JjmnqkOWBuNjSsppXXXPgpXa-100-100.jpg",
+                            "url": "//s.m.tmall.com/search.htm?cat=50025233"
+                        },
+                        {
+                            "name": "裤子",
+                            "id": "8147",
+                            "pic": "//img.alicdn.com/tfs/TB1kO5nqkOWBuNjSsppXXXPgpXa-100-100.jpg",
+                            "url": "//s.m.tmall.com/search.htm?cat=50100707"
+                        },
+                        {
+                            "name": "牛仔裤",
+                            "id": "8148",
+                            "pic": "//img.alicdn.com/tfs/TB1H6enqkOWBuNjSsppXXXPgpXa-100-100.jpg",
+                            "url": "//s.m.tmall.com/search.htm?cat=50025227"
+                        }
+                    ]
+                },
+                {
+                    "cache": "false",
+                    "name": "女鞋",
+                    "id": "8144",
+                    "type": "cat",
+                    "list": [
+                        {
+                            "name": "小白鞋",
+                            "id": "8149",
+                            "pic": "//img.alicdn.com/tfs/TB1gh88SVXXXXciaXXXXXXXXXXX-100-100.jpg",
+                            "url": "//s.m.tmall.com/search.htm?q=%E5%B0%8F%E7%99%BD%E9%9E%8B"
+                        },
+                        {
+                            "name": "乐福鞋",
+                            "id": "8150",
+                            "pic": "//img.alicdn.com/tfs/TB1yNqkSVXXXXXBXVXXXXXXXXXX-100-100.jpg",
+                            "url": "//s.m.tmall.com/search.htm?q=%E4%B9%90%E7%A6%8F%E9%9E%8B"
+                        },
+                        {
+                            "name": "草编鞋",
+                            "id": "8151",
+                            "pic": "//img.alicdn.com/tfs/TB1lwyrSVXXXXbCXFXXXXXXXXXX-100-100.jpg",
+                            "url": "//s.m.tmall.com/search.htm?q=%E8%8D%89%E7%BC%96%E9%9E%8B"
+                        }
+                    ]
+                },
+                {
+                    "cache": "false",
+                    "name": "男装",
+                    "id": "8152",
+                    "type": "cat",
+                    "list": [
+                        {
+                            "name": "T恤",
+                            "id": "8155",
+                            "pic": "//img.alicdn.com/tfs/TB1h.PxqmBYBeNjy0FeXXbnmFXa-100-100.png",
+                            "url": "//s.m.tmall.com/search.htm?q=T%E6%81%A4%E7%94%B7%0A"
+                        },
+                        {
+                            "name": "衬衫",
+                            "id": "8156",
+                            "pic": "//img.alicdn.com/tfs/TB1faWZqhGYBuNjy0FnXXX5lpXa-100-100.png",
+                            "url": "//s.m.tmall.com/search.htm?q=%E8%A1%AC%E8%A1%AB%E7%94%B7%0A"
+                        },
+                        {
+                            "name": "POLO衫",
+                            "id": "8157",
+                            "pic": "//img.alicdn.com/tfs/TB1EMREqbSYBuNjSspiXXXNzpXa-100-100.png",
+                            "url": "//s.m.tmall.com/search.htm?cat=50037920"
+                        },
+                        {
+                            "name": "夹克",
+                            "id": "8158",
+                            "pic": "//img.alicdn.com/tfs/TB1vUWzqkCWBuNjy0FaXXXUlXXa-100-100.png",
+                            "url": "//s.m.tmall.com/search.htm?cat=50026329"
+                        },
+                        {
+                            "name": "休闲裤",
+                            "id": "8159",
+                            "pic": "//img.alicdn.com/tfs/TB1qW4YqbGYBuNjy0FoXXciBFXa-100-100.png",
+                            "url": "//s.m.tmall.com/search.htm?cat=50026259"
+                        },
+                        {
+                            "name": "牛仔裤",
+                            "id": "8160",
+                            "pic": "//img.alicdn.com/tfs/TB11StUqXGWBuNjy0FbXXb4sXXa-100-100.png",
+                            "url": "//s.m.tmall.com/search.htm?cat=50026245"
+                        }
+                    ]
+                },
+                {
+                    "cache": "false",
+                    "name": "家电",
+                    "id": "8153",
+                    "type": "cat",
+                    "list": [
+                        {
+                            "name": "平板电视",
+                            "id": "8161",
+                            "pic": "//img.alicdn.com/tps/i1/TB1IQsKGVXXXXXLXpXXMxXJVFXX-100-100.jpg",
+                            "url": "//s.m.tmall.com/search.htm?q=%E5%B9%B3%E6%9D%BF%E7%94%B5%E8%A7%86"
+                        },
+                        {
+                            "name": "洗衣机",
+                            "id": "8162",
+                            "pic": "//img.alicdn.com/tps/i4/TB1TcZzGVXXXXc_apXXMxXJVFXX-100-100.jpg",
+                            "url": "//s.m.tmall.com/search.htm?q=%E6%B4%97%E8%A1%A3%E6%9C%BA"
+                        },
+                        {
+                            "name": "冰箱",
+                            "id": "8163",
+                            "pic": "//img.alicdn.com/tps/i3/TB19_gEGVXXXXbAXVXXMxXJVFXX-100-100.jpg",
+                            "url": "//s.m.tmall.com/search.htm?q=%E5%86%B0%E7%AE%B1"
+                        },
+                        {
+                            "name": "电饭煲",
+                            "id": "8164",
+                            "pic": "//img.alicdn.com/tps/i2/TB18cUQGVXXXXanXXXXMxXJVFXX-100-100.jpg",
+                            "url": "//s.m.tmall.com/search.htm?cat=54312953"
+                        },
+                        {
+                            "name": "空气净化器",
+                            "id": "8165",
+                            "pic": "//img.alicdn.com/tps/i4/TB1do7HGVXXXXaoXVXXMxXJVFXX-100-100.jpg",
+                            "url": "//s.m.tmall.com/search.htm?cat=54298151"
+                        },
+                        {
+                            "name": "扫地机器人",
+                            "id": "8166",
+                            "pic": "//img.alicdn.com/tps/i3/TB1CjwPGVXXXXa1XXXXMxXJVFXX-100-100.jpg",
+                            "url": "//s.m.tmall.com/search.htm?cat=54298156"
+                        }
+                    ]
+                },
+                {
+                    "cache": "false",
+                    "name": "美妆",
+                    "id": "8154",
+                    "type": "cat",
+                    "list": [
+                        {
+                            "name": "护肤套装",
+                            "id": "8167",
+                            "pic": "//img.alicdn.com/tps/i4/TB1ZsMAGVXXXXcMaXXXMxXJVFXX-100-100.jpg",
+                            "url": "//s.m.tmall.com/search.htm?cat=54288705"
+                        },
+                        {
+                            "name": "面膜",
+                            "id": "8168",
+                            "pic": "//img.alicdn.com/tps/i1/TB1IDECGVXXXXXOXVXXMxXJVFXX-100-100.jpg",
+                            "url": "//s.m.tmall.com/search.htm?cat=54288706"
+                        },
+                        {
+                            "name": "身体护理",
+                            "id": "8169",
+                            "pic": "//img.alicdn.com/tps/i4/TB19M7HGVXXXXaGXpXXMxXJVFXX-100-100.jpg",
+                            "url": "//s.m.tmall.com/search.htm?cat=54288542"
+                        }
+                    ]
+                }
+            ]
+        },
+        "sideBlock": {
+            "cache": "false",
+            "list": [
+                { "color": "FFFFFF", "name": "为您推荐", "id": "176" },
+                { "color": "FFFFFF", "name": "国际大牌", "id": "1495" },
+                { "color": "FFFFFF", "name": "天猫国际", "id": "5188" },
+                { "color": "FFFFFF", "name": "女装", "id": "178" },
+                { "color": "FFFFFF", "name": "女鞋", "id": "179" },
+                { "color": "FFFFFF", "name": "男装", "id": "180" },
+                { "color": "FFFFFF", "name": "男鞋", "id": "181" },
+                { "color": "FFFFFF", "name": "内衣", "id": "182" },
+                { "color": "FFFFFF", "name": "母婴", "id": "183" },
+                { "color": "FFFFFF", "name": "手机", "id": "8019" },
+                { "color": "FFFFFF", "name": "数码", "id": "184" },
+                { "color": "FFFFFF", "name": "家电", "id": "185" },
+                { "color": "FFFFFF", "name": "美妆", "id": "186" },
+                { "color": "FFFFFF", "name": "箱包", "id": "187" },
+                { "color": "FFFFFF", "name": "运动", "id": "188" },
+                { "color": "FFFFFF", "name": "户外", "id": "189" },
+                { "color": "FFFFFF", "name": "家装", "id": "190" },
+                { "color": "FFFFFF", "name": "家纺", "id": "191" },
+                { "color": "FFFFFF", "name": "居家百货", "id": "192" },
+                { "color": "FFFFFF", "name": "鲜花宠物", "id": "9832" },
+                { "color": "FFFFFF", "name": "配饰", "id": "1824" },
+                { "color": "FFFFFF", "name": "食品", "id": "1698" },
+                { "color": "FFFFFF", "name": "生鲜", "id": "7478" },
+                { "color": "FFFFFF", "name": "汽车摩托", "id": "194" },
+                { "color": "FFFFFF", "name": "医药", "id": "195" },
+                { "color": "FFFFFF", "name": "图书", "id": "1517" },
+                { "color": "FFFFFF", "name": "通信", "id": "197" },
+                { "color": "FFFFFF", "name": "洗护", "id": "6344" },
+                { "color": "FFFFFF", "name": "乐器", "id": "7925" }
+            ]
+        },
+        "ver": "1"
+    },
+    "ret": [ "SUCCESS::调用成功" ],
+    "v": "1.0"
+}

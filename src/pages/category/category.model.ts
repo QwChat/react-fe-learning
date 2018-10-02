@@ -1,22 +1,13 @@
-import { observable, computed, action } from "mobx"
+import { observable, action } from "mobx"
 import { SideItem, SectionCategory, CategoryList } from "../../services/category"
 
 export default class CategoryModel {
     @observable public activeSideId = ""
     @observable public sideItems: SideItem[] = []
 
-    @observable
-    private rootSectionCategoryList: SectionCategory[] = []
+    @observable public sectionCategoryList: SectionCategory[] = []
 
-    @observable
-    private sideSubListMap: { [key: string]: SectionCategory[] } = {}
-
-    @computed
-    public get sectionCategoryList(): SectionCategory[] {
-        console.log(this.sideSubListMap)
-
-        return this.sideSubListMap[this.activeSideId] || this.rootSectionCategoryList
-    }
+    @observable private sideSubListMap: { [key: string]: SectionCategory[] } = {}
 
     constructor() {
         this.getSideItemSubItems("")
@@ -36,11 +27,11 @@ export default class CategoryModel {
                 this.sideItems = data.sideItems
             }
 
-            if (!this.activeSideId) {
-                this.rootSectionCategoryList = data.sectionCategoryList
-            } else {
+            if (this.activeSideId) {
                 this.sideSubListMap[this.activeSideId] = data.sectionCategoryList
             }
+
+            this.sectionCategoryList = data.sectionCategoryList
         })
     }
 }

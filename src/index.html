@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>天猫TMALL</title>
-
     <meta name="renderer" content="webkit"/>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
     <meta name="data-spm" content="a211ue">
@@ -28,6 +27,9 @@
             recalc = function () {
                 var clientWidth = docEl.clientWidth;
                 if (!clientWidth) return;
+
+                if (clientWidth > 750) clientWidth = 750
+
                 docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
             };
             if (!doc.addEventListener) return;
@@ -35,7 +37,6 @@
             doc.addEventListener('DOMContentLoaded', recalc, false);
         })(document, window);
     </script>
-    <title>假猫</title>
 </head>
 
 <body>

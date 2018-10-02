@@ -1,7 +1,8 @@
 import webpack from "webpack"
 import { resolve } from "path"
 import UglifyJsPlugin from "uglifyjs-webpack-plugin"
-// import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin"
+import ErrorOverlayPlugin from "error-overlay-webpack-plugin"
+import { CheckerPlugin } from "awesome-typescript-loader"
 import MiniCssExtractPlugin from "mini-css-extract-plugin"
 import OptimizeCSSAssetsPlugin from "optimize-css-assets-webpack-plugin"
 import HtmlWebpackPlugin from "html-webpack-plugin"
@@ -56,13 +57,28 @@ export const webpackConfig: webpack.Configuration = {
     },
     module: {
         rules: [
-            // {
-            //     enforce: "pre",
-            //     test: /\.(j|t)sx?$/,
-            //     loader: "source-map-loader"
-            // },
             {
-                test: /\.(j|t)sx?$/,
+                enforce: "pre",
+                test: /\.js$/,
+                loader: "source-map-loader"
+            },
+            {
+                test: /\.tsx?$/,
+                loader: "awesome-typescript-loader",
+                options: {
+                    useCache: true,
+                    useBabel: true,
+                    babelOptions: {
+                        babelrc: false /* Important line */,
+                        presets: [ [ "@babel/preset-env", { targets: "last 2 versions, ie 11", modules: false } ] ],
+                        plugins: [ "react-hot-loader/babel" ]
+                    },
+                    babelCore: "@babel/core" // needed for Babel v7
+                }
+            },
+            // https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/
+            {
+                test: /\.jsx?$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
@@ -71,12 +87,12 @@ export const webpackConfig: webpack.Configuration = {
                         babelrc: false,
                         presets: [
                             [ "@babel/preset-env", { targets: { browsers: "last 2 versions" } } ],
-                            "@babel/preset-typescript",
                             "@babel/preset-react"
                         ],
                         plugins: [
                             [ "@babel/plugin-proposal-decorators", { legacy: true } ],
                             [ "@babel/plugin-proposal-class-properties", { loose: true } ],
+                            [ "@babel/plugin-proposal-object-rest-spread" ],
                             "react-hot-loader/babel"
                         ]
                     }
@@ -152,9 +168,8 @@ export const webpackConfig: webpack.Configuration = {
         ]
     },
     plugins: [
-        // new ForkTsCheckerWebpackPlugin({
-        //     tslint: true
-        // }),
+        new CheckerPlugin(),
+        new ErrorOverlayPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({
             __DEV__

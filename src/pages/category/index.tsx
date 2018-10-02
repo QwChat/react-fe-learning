@@ -9,7 +9,7 @@ interface ICategoryState {}
 
 class Category extends React.Component<ICategoryProps, ICategoryState> {
     public render(): JSX.Element {
-        return <span className={styles.wrapper}>Category</span>
+        return <span className={styles.wrapper}>test Category</span>
     }
 }
 

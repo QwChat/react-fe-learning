@@ -25,6 +25,7 @@ if (IsProd()) {
     const middleware = webpackDevMiddleware(compiler, {
         publicPath: config.output ? config.output.publicPath : "",
         contentBase: "src",
+        logLevel: "warn",
         stats: {
             colors: true,
             hash: false,

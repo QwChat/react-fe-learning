@@ -2,7 +2,7 @@ import * as React from "react"
 import { hot } from "react-hot-loader"
 import styles from "./index.scss"
 
-import { showcase, Nav, Banner, ProductItem } from "../../services/homepage"
+import { Showcase, Nav, Banner, ProductItem } from "../../services/homepage"
 
 import { Header } from "./Header"
 import { Navs } from "./Navs"
@@ -37,7 +37,7 @@ class Index extends React.Component<{}, IIndexState> {
     }
 
     public componentDidMount() {
-        showcase({}).then((data) => {
+        Showcase({}).then((data) => {
             if (data) {
                 this.setState({
                     navs: data.navs,

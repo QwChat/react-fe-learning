@@ -1,4 +1,5 @@
 import * as React from "react"
+import { autorun } from "mobx"
 import { observer } from "mobx-react"
 import { hot } from "react-hot-loader"
 import classnames from "classnames"
@@ -81,6 +82,10 @@ class Category extends React.Component<ICategoryProps, ICategoryState> {
 }
 
 const store = new CategoryModel()
+
+autorun(() => {
+    console.log(store.activeSideId, "auto run")
+})
 
 makeInspectable(store)
 

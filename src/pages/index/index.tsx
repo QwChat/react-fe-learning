@@ -1,6 +1,7 @@
 import * as React from "react"
 import { hot } from "react-hot-loader"
 import styles from "./index.scss"
+import { IsErrorResponse } from "../../webapi"
 
 import { Showcase, Nav, Banner, ProductItem } from "../../services/homepage"
 
@@ -38,6 +39,10 @@ class Index extends React.Component<{}, IIndexState> {
 
     public componentDidMount() {
         Showcase({}).then((data) => {
+            if (IsErrorResponse(data)) {
+                return
+            }
+
             if (data) {
                 this.setState({
                     navs: data.navs,

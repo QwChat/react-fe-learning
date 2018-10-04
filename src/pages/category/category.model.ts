@@ -1,5 +1,6 @@
 import { observable, action } from "mobx"
 import { SideItem, SectionCategory, CategoryList } from "../../services/category"
+import { IsErrorResponse } from "../../webapi"
 
 export default class CategoryModel {
     @observable public activeSideId = ""
@@ -23,6 +24,10 @@ export default class CategoryModel {
 
     private getSideItemSubItems(sideId: string) {
         CategoryList({ sideId }).then((data) => {
+            if (IsErrorResponse(data)) {
+                return
+            }
+
             if (data.sideItems && data.sideItems.length > 0) {
                 this.sideItems = data.sideItems
             }

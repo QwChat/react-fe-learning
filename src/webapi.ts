@@ -1,13 +1,5 @@
 import axios, { AxiosRequestConfig, AxiosResponse, AxiosError } from "axios"
 
-const config: AxiosRequestConfig = {}
-
-function getApiUrl(method: string) {
-    const HOST = "127.0.0.1:3001"
-
-    return `//${HOST}/${method}`.toLocaleLowerCase()
-}
-
 // all api is error return structure
 interface IApiErrorResponseData {
     code: number
@@ -16,6 +8,13 @@ interface IApiErrorResponseData {
 
 interface IApiError extends AxiosError {
     response?: AxiosResponse<IApiErrorResponseData>
+}
+
+const config: AxiosRequestConfig = {}
+function getApiUrl(method: string) {
+    const HOST = "127.0.0.1:3001"
+
+    return `//${HOST}/${method}`.toLocaleLowerCase()
 }
 
 function onError(res: IApiError): IApiErrorResponseData {
@@ -29,9 +28,7 @@ function onError(res: IApiError): IApiErrorResponseData {
             message: res.response.data
         }
     }
-
     console.error(res)
-
     return res.response ? res.response.data : defaultErrorResponse
 }
 

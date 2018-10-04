@@ -25,6 +25,7 @@ export default class CategoryModel {
     private getSideItemSubItems(sideId: string) {
         CategoryList({ sideId }).then((data) => {
             if (IsErrorResponse(data)) {
+                // error
                 return
             }
 

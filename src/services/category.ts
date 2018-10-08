@@ -5,8 +5,14 @@
 
 import webapi from "../webapi";
 
+export enum SectionType {
+  cat = "cat",
+  brand = "brand",
+}
+
+
 export interface CategoryItem {
-  id: string
+  id: number
   name: string
   image: string
   url: string
@@ -14,7 +20,7 @@ export interface CategoryItem {
 
 export interface SectionCategory {
   id: string
-  type: string
+  type: SectionType
   name: string
   categories: CategoryItem[]
 }

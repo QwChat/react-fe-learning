@@ -5,5 +5,7 @@ genServices:
 		./apidoc/homepage.proto \
 		./apidoc/category.proto \
 		./apidoc/product.proto  \
+		./apidoc/todo.proto  \
 
 .PHONY: genServices
+

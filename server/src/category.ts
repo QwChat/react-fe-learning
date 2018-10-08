@@ -14,17 +14,17 @@ function CategoryList(req: Request, res: Response) {
     const sideItems = !data.data.sideBlock.list
         ? []
         : data.data.sideBlock.list.map((side) => ({
-              id: side.id,
+              id: Number(side.id),
               name: side.name
           }))
 
     const sectionCategoryList = data.data.mainBlock.models.map((model) => {
         return {
-            id: model.id,
+            id: Number(model.id),
             type: model.type,
             name: model.name,
             categories: model.list.map(({ name, id, pic, url }) => ({
-                id,
+                id: Number(id),
                 name: name || "",
                 image: pic,
                 url

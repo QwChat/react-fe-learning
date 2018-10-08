@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package todo;
+
+
+message TodoItem {
+    string id = 1;
+    string name = 2;
+    bool complete = 3;
+}
+
+message TodoListRequest {
+    int32 uid = 1;
+}
+
+message TodoListResponse {
+    repeated TodoItem list = 1;
+}
+
+service Todo {
+    rpc List(TodoListRequest) returns (TodoListResponse);
+}

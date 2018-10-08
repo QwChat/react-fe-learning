@@ -3,15 +3,20 @@ syntax = "proto3";
 package category;
 
 message CategoryItem {
-    string id = 1;
+    int32 id = 1;
     string name = 2;
     string image = 3;
     string url = 4;
 }
 
+enum SectionType {
+    cat = 0;
+    brand = 1;
+}
+
 message SectionCategory {
     string id = 1;
-    string type = 2;
+    SectionType type = 2;
     string name = 3;
     repeated CategoryItem categories = 4;
 }

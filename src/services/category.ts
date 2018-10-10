@@ -3,6 +3,7 @@
  * Don't change manually
  */
 
+import { ProductItem as ProductProductItem } from "./product";
 import webapi from "../webapi";
 
 export enum SectionType {
@@ -39,12 +40,27 @@ export interface CategoryListResponse {
   sectionCategoryList: SectionCategory[]
 }
 
+export interface CategoryProductsRequest {
+  categoryId: number
+  limit: number
+  offset: number
+}
+
+export interface CategoryProductsResponse {
+  products: ProductProductItem[]
+  total: number
+}
+
 
 
 export function CategoryList(payload: CategoryListRequest) {
   return webapi<CategoryListResponse>("category.Category/CategoryList", payload);
 }
+export function CategoryProducts(payload: CategoryProductsRequest) {
+  return webapi<CategoryProductsResponse>("category.Category/CategoryProducts", payload);
+}
 
 export default {
   CategoryList,
+  CategoryProducts,
 }

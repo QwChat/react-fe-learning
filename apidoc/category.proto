@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+import "product.proto";
+
 package category;
 
 message CategoryItem {
@@ -35,6 +37,20 @@ message CategoryListResponse {
     repeated SectionCategory sectionCategoryList = 2;
 }
 
+
+message CategoryProductsRequest {
+    int32 categoryId = 1;
+    int32 limit = 2;
+    int32 offset = 3;
+}
+
+message CategoryProductsResponse {
+    repeated product.ProductItem products = 1;
+    int32 total = 2;
+}
+
 service Category {
     rpc CategoryList (CategoryListRequest) returns (CategoryListResponse);
+
+    rpc CategoryProducts (CategoryProductsRequest) returns (CategoryProductsResponse);
 }
